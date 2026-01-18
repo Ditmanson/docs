@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hugo on Griz Docs</title>
+    <link>https://docs.griz.sh/hugo/</link>
+    <description>Recent content in Hugo on Griz Docs</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 16 Jan 2026 15:26:15 +0000</lastBuildDate>
+    <atom:link href="https://docs.griz.sh/hugo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo installation</title>
+      <link>https://docs.griz.sh/hugo/installation/</link>
+      <pubDate>Fri, 16 Jan 2026 15:26:15 +0000</pubDate>
+      <guid>https://docs.griz.sh/hugo/installation/</guid>
+      <description>&lt;h1 id=&#34;package-manager-install-for-you-non-linux-people&#34;&gt;Package manager install for you non linux people&lt;/h1&gt;&#xA;&lt;h2 id=&#34;windows&#34;&gt;windows&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;windows button and open cmd terminal&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;@&amp;quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&amp;quot; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &amp;quot;[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))&amp;quot; &amp;amp;&amp;amp; SET &amp;quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&amp;quot;&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;or with powershell&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;code&gt;Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&#39;https://community.chocolatey.org/install.ps1&#39;))&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;real-windows-instructions&#34;&gt;Real Windows instructions&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Pick a linux distro, i like omarchy, and dual boot your os, or better just overwrite the full partition.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;mac&#34;&gt;Mac&lt;/h2&gt;&#xA;&lt;p&gt;test&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Hugo Picking a template</title>
+      <link>https://docs.griz.sh/hugo/picking_a_template/</link>
+      <pubDate>Fri, 16 Jan 2026 15:26:15 +0000</pubDate>
+      <guid>https://docs.griz.sh/hugo/picking_a_template/</guid>
+      <description>&lt;h1 id=&#34;hugo-themes&#34;&gt;Hugo Themes&lt;/h1&gt;&#xA;&lt;h2 id=&#34;official-themes&#34;&gt;&lt;a href=&#34;https://themes.gohugo.io/&#34;&gt;Official Themes&lt;/a&gt;&lt;/h2&gt;&#xA;&lt;p&gt;You can probably find unofficial themes with a google search, but this is good enough for me. For this site I clicked the tag docs on the side, and looked through a few. I chose this one because it&amp;rsquo;s simple, has no npm packages, and has an example site that&amp;rsquo;s ready for use.&lt;/p&gt;&#xA;&lt;p&gt;If you want something fancier, you pick a theme and look through the setup instructions. Many fancy themes rely on sass or npm, use your package manager to install what is missing. Come to me if you have trouble, and I can walk you through a specific setup.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Modifying Hugo Content</title>
+      <link>https://docs.griz.sh/hugo/modifying_hugo/</link>
+      <pubDate>Fri, 16 Jan 2026 15:26:15 +0000</pubDate>
+      <guid>https://docs.griz.sh/hugo/modifying_hugo/</guid>
+      <description>&lt;h1 id=&#34;hugo-content&#34;&gt;Hugo Content&lt;/h1&gt;&#xA;&lt;p&gt;All your markdown files in the content and content/child directories are what&amp;rsquo;s used to render the html later. This is why I like an example site. Different themes set up static files and folders differently. They usually have good instructions; however, I think it&amp;rsquo;s easiest just to grab an example site and edit everything in the content folder, one file at a time and then check it with &lt;code&gt;hugo server&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

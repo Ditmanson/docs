@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Hugo installation - Griz Docs</title>
+<meta name="description" content="Description not needed">
+<meta name="generator" content="Hugo 0.154.2">
+<link href="https://docs.griz.sh//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://docs.griz.sh/hugo/installation/">
+<link rel="stylesheet" href="https://docs.griz.sh/css/theme.min.css">
+<link rel="stylesheet" href="https://docs.griz.sh/css/chroma.min.css">
+<script defer src="https://docs.griz.sh//js/fontawesome6/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
+<script src="https://docs.griz.sh/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:url" content="https://docs.griz.sh/hugo/installation/">
+  <meta property="og:site_name" content="Griz Docs">
+  <meta property="og:title" content="Hugo installation">
+  <meta property="og:description" content="Description not needed">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="hugo">
+    <meta property="article:published_time" content="2026-01-16T15:26:15+00:00">
+    <meta property="article:modified_time" content="2026-01-16T15:26:15+00:00">
+    <meta property="og:image" content="https://docs.griz.sh/images/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://docs.griz.sh/images/og-image.png">
+  <meta name="twitter:title" content="Hugo installation">
+  <meta name="twitter:description" content="Description not needed">
+
+  <meta itemprop="name" content="Hugo installation">
+  <meta itemprop="description" content="Description not needed">
+  <meta itemprop="datePublished" content="2026-01-16T15:26:15+00:00">
+  <meta itemprop="dateModified" content="2026-01-16T15:26:15+00:00">
+  <meta itemprop="wordCount" content="160">
+  <meta itemprop="image" content="https://docs.griz.sh/images/og-image.png"></head>
+<body><div class="container"><header>
+<h1>Griz Docs</h1><span class="version">Version 6.9</span><a href="https://github.com/Ditmanson/docs" class="github"><i class="fab fa-github"></i></a>
+<p class="description">Welcome to my docs. Check out my videos at griz.sh/tech</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li id="home" class=""><a href="/"><i class='fa fa-heart'></i>&nbsp;Home</a></li>
+<li class=""><a href="/about/">About Griz Docs</a></li>
+<li class=""><a href="/post/goisforlovers/">Hugo is written in Go</a></li></ul>
+</nav>
+</div>
+
+<div class="content-container">
+<main><h1>Hugo installation</h1>
+<h1 id="package-manager-install-for-you-non-linux-people">Package manager install for you non linux people</h1>
+<h2 id="windows">windows</h2>
+<ul>
+<li>windows button and open cmd terminal
+<ul>
+<li><code>@&quot;%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe&quot; -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command &quot;[System.Net.ServicePointManager]::SecurityProtocol = 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))&quot; &amp;&amp; SET &quot;PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin&quot;</code></li>
+</ul>
+</li>
+<li>or with powershell
+<ul>
+<li><code>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="real-windows-instructions">Real Windows instructions</h3>
+<ul>
+<li>Pick a linux distro, i like omarchy, and dual boot your os, or better just overwrite the full partition.</li>
+</ul>
+<h2 id="mac">Mac</h2>
+<p>test</p>
+<ul>
+<li>open up the terminal
+<ul>
+<li><code>/bin/bash -c &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)&quot;</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="real-mac-instructions">Real Mac instructions</h3>
+<ul>
+<li>Install ashi linux,<code>curl https://alx.sh | sh</code>
+test</li>
+</ul>
+<h1 id="install-hugo"><a href="./installation">Install hugo</a></h1>
+<ul>
+<li><a href="https://brew.sh/">brew install hugo</a> # mac</li>
+<li>sudo pacman -S hugo # arch</li>
+<li>sudo apt install hugo # ubuntu</li>
+<li>sudo apt-get install hugo # debian</li>
+<li>sudo dnf install hugo # fedora</li>
+<li><a href="https://chocolatey.org/install">choco install hugo-extended</a> # windows</li>
+</ul>
+<h1 id="install-git"><a href="https://git-scm.com/install/">Install git</a></h1>
+<h2 id="windows-1">Windows</h2>
+<ul>
+<li><a href="https://git-scm.com/install/windows">Click here to download from here. follow instructions.</a></li>
+<li><a href="https://gitforwindows.org/">Or here is probably better because you get a bash terminal too</a></li>
+</ul>
+<h2 id="mac-1">Mac</h2>
+<ul>
+<li><code>brew install git</code></li>
+</ul>
+<h2 id="linux">linux</h2>
+<ul>
+<li>any package manager can install git.</li>
+</ul>
+<div class="edit-meta">
+Last updated on 16 Jan 2026
+
+
+<br>
+Published on 16 Jan 2026
+<br><a href="https://github.com/thingsym/hugo-theme-techdoc/edit/master/hugo/installation.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://docs.griz.sh/hugo/" title="Hugo"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - Hugo</a>
+<a class="nav nav-next" href="https://docs.griz.sh/hugo/picking_a_template/" title="Hugo Picking a template">Next - Hugo Picking a template <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="https://docs.griz.sh/">Home</a></li>
+
+<li class="parent"><a href="https://docs.griz.sh/hugo/">Hugo</a>
+  
+<ul class="sub-menu">
+<li class="active"><a href="https://docs.griz.sh/hugo/installation/">Hugo installation</a></li>
+<li class=""><a href="https://docs.griz.sh/hugo/picking_a_template/">Hugo Picking a template</a></li>
+<li class=""><a href="https://docs.griz.sh/hugo/modifying_hugo/">Modifying Hugo Content</a></li>
+</ul>
+  
+</li>
+
+
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>

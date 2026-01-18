@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>Hugo - Griz Docs</title>
+<meta name="description" content="Description not needed">
+<meta name="generator" content="Hugo 0.154.2">
+<link href="https://docs.griz.sh//index.xml" rel="alternate" type="application/rss+xml">
+<link rel="canonical" href="https://docs.griz.sh/hugo/">
+<link rel="stylesheet" href="https://docs.griz.sh/css/theme.min.css">
+<link rel="stylesheet" href="https://docs.griz.sh/css/chroma.min.css">
+<script defer src="https://docs.griz.sh//js/fontawesome6/all.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.easing@1.4.1/jquery.easing.min.js" integrity="sha256-H3cjtrm/ztDeuhCN9I4yh4iN2Ybx/y1RM7rMmAesA0k=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js" integrity="sha256-4XodgW4TwIJuDtf+v6vDJ39FVxI0veC/kSCCmnFp7ck=" crossorigin="anonymous"></script>
+<script src="https://docs.griz.sh/js/bundle.js"></script><style>
+:root {}
+</style>
+<meta property="og:url" content="https://docs.griz.sh/hugo/">
+  <meta property="og:site_name" content="Griz Docs">
+  <meta property="og:title" content="Hugo">
+  <meta property="og:description" content="Description not needed">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="website">
+    <meta property="og:image" content="https://docs.griz.sh/images/pexels-photo-196666.jpeg">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://docs.griz.sh/images/pexels-photo-196666.jpeg">
+  <meta name="twitter:title" content="Hugo">
+  <meta name="twitter:description" content="Description not needed">
+
+  <meta itemprop="name" content="Hugo">
+  <meta itemprop="description" content="Description not needed">
+  <meta itemprop="datePublished" content="2018-12-08T15:26:15+00:00">
+  <meta itemprop="dateModified" content="2026-01-19T15:26:15+00:00">
+  <meta itemprop="wordCount" content="271">
+  <meta itemprop="image" content="https://docs.griz.sh/images/pexels-photo-196666.jpeg"></head>
+<body><div class="container"><header>
+<h1>Griz Docs</h1><span class="version">Version 6.9</span><a href="https://github.com/Ditmanson/docs" class="github"><i class="fab fa-github"></i></a>
+<p class="description">Welcome to my docs. Check out my videos at griz.sh/tech</p>
+
+</header>
+<div class="global-menu">
+<nav>
+<ul>
+<li id="home" class=""><a href="/"><i class='fa fa-heart'></i>&nbsp;Home</a></li>
+<li class=""><a href="/about/">About Griz Docs</a></li>
+<li class=""><a href="/post/goisforlovers/">Hugo is written in Go</a></li></ul>
+</nav>
+</div>
+
+<div class="content-container">
+<main><h1>Hugo</h1><h1 id="my-walkthrough">My walkthrough</h1>
+<p><a href="https://www.youtube.com/watch?v=Ri4XtitRAT0">Building a hugo site part 1</a></p>
+<h1 id="prerequisites">Prerequisites</h1>
+<ul>
+<li><a href="https://gohugo.io/installation/">install hugo cli</a></li>
+<li><a href="https://git-scm.com/book/en/v2/Getting-Started-Installing-Git">install git</a></li>
+<li><a href="github.com">make github account</a></li>
+</ul>
+<h2 id="installation"><a href="./installation">Installation</a></h2>
+<ul>
+<li><a href="https://brew.sh/">brew install hugo</a> # mac</li>
+<li>sudo pacman -S hugo # arch</li>
+<li>sudo apt install hugo # debian</li>
+<li>sudo dnf install hugo # fedora</li>
+<li><a href="https://chocolatey.org/install">choco install hugo-extended</a> # windows</li>
+</ul>
+<h2 id="from-hugos-quickstart-guide">From hugo&rsquo;s quickstart guide</h2>
+<pre tabindex="0"><code>hugo version
+hugo new site quickstart
+cd quickstart
+git init
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+echo &#34;theme = &#39;ananke&#39;&#34; &gt;&gt; hugo.toml
+hugo server
+</code></pre><h2 id="how-do-we-use-hugo">How do we use hugo?</h2>
+<p>For the most part we do everything from the content folder. Make your markdown files as layed out in whatever theme you choose. Then we test with <code>hugo server</code> and check out how it looks at localhost:1313 from a browser. When we are ready to make our executables we run <code>hugo</code> then rsync the contents of the public directory to our pvc.</p>
+<h2 id="configuration"><a href="./configuration">Configuration</a></h2>
+<p>You may specify options in hugo.toml (or hugo.yaml/hugo.json) of your site to make use of this theme&rsquo;s features.</p>
+<p>I used to go through and change eveyrthing to yaml, but I find it&rsquo;s easier to just grab a templates example toml/json/yaml. If they don&rsquo;t have an example config file, I won&rsquo;t use that template. Not trying to read code with a tool like this.</p>
+<p>Some templates require node. Anything that has <code>npm</code> in the instructions requires node to be installed. I pretty much just avoid those ones. npm package files are pretty heavy, probably the heaviest files in software development. If I need node, then I might as well use a real framework.</p>
+<p>I&rsquo;ll leave more chapters for more detailed portions of using hugo.</p>
+<h3 id="example-of-screen-shot-for-this-template">Example of screen shot for this template.</h3>
+<p><img src="../images/pexels-photo-196666.jpeg" alt="Image for later"></p>
+<div class="edit-meta">
+Last updated on 19 Jan 2026
+
+
+<br>
+Published on 8 Dec 2018
+<br><a href="https://github.com/thingsym/hugo-theme-techdoc/edit/master/hugo/_index.md" class="edit-page"><i class="fas fa-pen-square"></i>&nbsp;Edit on GitHub</a></div><nav class="pagination"><a class="nav nav-prev" href="https://docs.griz.sh/" title="GRIZH ome title"><i class="fas fa-arrow-left" aria-hidden="true"></i>&nbsp;Prev - GRIZH ome title</a>
+<a class="nav nav-next" href="https://docs.griz.sh/hugo/installation/" title="Hugo installation">Next - Hugo installation <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+</nav><footer><p class="powered">Powered by <a href="https://gohugo.io">Hugo</a>. Theme by <a href="https://themes.gohugo.io/hugo-theme-techdoc/">TechDoc</a>. Designed by <a href="https://github.com/thingsym/hugo-theme-techdoc">Thingsym</a>.</p>
+</footer>
+</main>
+<div class="sidebar">
+
+<nav class="open-menu">
+<ul>
+<li class=""><a href="https://docs.griz.sh/">Home</a></li>
+
+<li class=" active"><a href="https://docs.griz.sh/hugo/">Hugo</a>
+  
+<ul class="sub-menu">
+<li class=""><a href="https://docs.griz.sh/hugo/installation/">Hugo installation</a></li>
+<li class=""><a href="https://docs.griz.sh/hugo/picking_a_template/">Hugo Picking a template</a></li>
+<li class=""><a href="https://docs.griz.sh/hugo/modifying_hugo/">Modifying Hugo Content</a></li>
+</ul>
+  
+</li>
+
+
+</ul>
+</nav>
+
+
+
+<div class="sidebar-footer"></div>
+</div>
+
+</div><a href="#" id="backtothetop-fixed" class="backtothetop"
+ data-backtothetop-duration="600"
+ data-backtothetop-easing="easeOutQuart"
+ data-backtothetop-fixed-fadeIn="1000"
+ data-backtothetop-fixed-fadeOut="1000"
+ data-backtothetop-fixed-bottom="10"
+ data-backtothetop-fixed-right="20">
+<span class="fa-layers fa-fw">
+<i class="fas fa-circle"></i>
+<i class="fas fa-arrow-circle-up"></i>
+</span></a>
+</div>
+</body>
+</html>
